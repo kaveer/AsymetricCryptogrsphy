@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenerateKeyComponent implements OnInit {
 
+  modeselect: string = ''
+  
   constructor() { }
 
   ngOnInit(): void {
