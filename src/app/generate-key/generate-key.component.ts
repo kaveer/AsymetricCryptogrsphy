@@ -7,11 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenerateKeyComponent implements OnInit {
 
-  modeselect: string = ''
+  sSelectBitType: string = '-1'
+  sPrivateKey: string = 'fgb'
+  sPublicKey: string = 'fgbgb'
   
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  GenerateKeyClick(){
+    
+  }
+
+  CancelClick(){
+    this.sSelectBitType = '-1'
+    this.sPrivateKey = ''
+    this.sPublicKey = ''
   }
 
 }

@@ -1,5 +1,5 @@
 <mat-form-field>
-    <mat-select placeholder="Select">
+    <mat-select [(ngModel)]="sSelectBitType" placeholder="Select">
       <mat-option value="option">Option 1</mat-option>
       <mat-option value="option">Option 2</mat-option>
       <mat-option value="option">Option 3</mat-option>
@@ -8,16 +8,16 @@
 </mat-form-field>
 
   <mat-form-field class="example-full-width">
-    <textarea matInput disabled  placeholder="Public key"></textarea>
+    <textarea matInput disabled placeholder="Public key">{{sPublicKey}}</textarea>
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
-    <textarea matInput disabled  placeholder="Private key"></textarea>
+    <textarea matInput disabled placeholder="Private key">{{sPrivateKey}}</textarea>
   </mat-form-field>
 
   <div class="example-button-row">
-    <button mat-raised-button color="primary">Generate</button>
-    <button mat-raised-button color="warn">Cancel</button>
+    <button mat-raised-button (click)="GenerateKeyClick()" color="primary">Generate</button>
+    <button mat-raised-button (click)="CancelClick()" color="warn">Cancel</button>
   </div>
 
  
