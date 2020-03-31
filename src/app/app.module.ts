@@ -16,9 +16,16 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+import {MatTabsModule} from '@angular/material/tabs'
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { GenerateKeyComponent } from './generate-key/generate-key.component';
 import { CryptographyComponent } from './cryptography/cryptography.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 
@@ -27,6 +34,7 @@ import { CryptographyComponent } from './cryptography/cryptography.component';
     AppComponent,
     GenerateKeyComponent,
     CryptographyComponent,
+    AboutUsComponent,
     
   ],
   imports: [
@@ -39,7 +47,13 @@ import { CryptographyComponent } from './cryptography/cryptography.component';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    FormsModule
+    MatDividerModule,
+    MatListModule,
+    FormsModule,
+    MatGridListModule,
+    MatTabsModule,
+    MatIconModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

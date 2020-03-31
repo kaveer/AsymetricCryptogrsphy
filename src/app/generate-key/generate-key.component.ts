@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-generate-key',
@@ -8,22 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class GenerateKeyComponent implements OnInit {
 
   sSelectBitType: string = '-1'
-  sPrivateKey: string = 'fgb'
-  sPublicKey: string = 'fgbgb'
+  sPrivateKey: string = ''
+  sPublicKey: string = ''
   
-  constructor() { }
+  constructor(private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
 
   GenerateKeyClick(){
-    
+    this._snackBar.open("message", "Ok", {
+      duration: 2000,
+    });
   }
-
-  CancelClick(){
-    this.sSelectBitType = '-1'
-    this.sPrivateKey = ''
-    this.sPublicKey = ''
-  }
-
 }

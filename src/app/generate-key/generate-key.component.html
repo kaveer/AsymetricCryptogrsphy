@@ -7,18 +7,29 @@
     </mat-select>
 </mat-form-field>
 
+<div>
+  <mat-form-field class="example-full-width"> 
+    <textarea  rows="1" matInput disabled placeholder="Public key">{{sPublicKey}}</textarea>
+  </mat-form-field>
+  
+  <button mat-button>
+    <mat-icon>file_copy</mat-icon>
+  </button>
+</div>
+
+<div>
   <mat-form-field class="example-full-width">
-    <textarea matInput disabled placeholder="Public key">{{sPublicKey}}</textarea>
+    <textarea rows="1" matInput disabled placeholder="Private key">{{sPrivateKey}}</textarea>
   </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <textarea matInput disabled placeholder="Private key">{{sPrivateKey}}</textarea>
-  </mat-form-field>
+  <button mat-button>
+    <mat-icon>file_copy</mat-icon>
+  </button>
+</div>
 
-  <div class="example-button-row">
-    <button mat-raised-button (click)="GenerateKeyClick()" color="primary">Generate</button>
-    <button mat-raised-button (click)="CancelClick()" color="warn">Cancel</button>
-  </div>
+<div class="example-button-row">
+  <button mat-raised-button (click)="GenerateKeyClick()" color="primary">Generate</button>
+</div>
 
  
 
