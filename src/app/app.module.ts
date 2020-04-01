@@ -29,6 +29,7 @@ import { GenerateKeyComponent } from './generate-key/generate-key.component';
 import { CryptographyComponent } from './cryptography/cryptography.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     MatTabsModule,
     MatIconModule,
     MatSnackBarModule,
-    ClipboardModule
+    ClipboardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

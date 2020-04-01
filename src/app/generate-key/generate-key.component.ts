@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-generate-key',
@@ -10,10 +11,10 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 export class GenerateKeyComponent implements OnInit {
 
   sSelectBitType: string = '-1'
-  sPrivateKey: string = 'private key'
-  sPublicKey: string = 'publick key'
+  sPrivateKey: string = ''
+  sPublicKey: string = ''
   
-  constructor(private _snackBar: MatSnackBar) { }
+  constructor(private _snackBar: MatSnackBar, private _apiService: ApiService) { }
 
   ngOnInit(): void {
   }
@@ -27,7 +28,16 @@ export class GenerateKeyComponent implements OnInit {
     }
    
     // fetch from api
-    this.CopyToClipboard("dfverebhrtherfv")
+    this._apiService.GenerateKey(1).subscribe(
+      (response) => {                           
+        console.log('response received')
+        console.log(response)
+      },
+      (error) => {                              
+        console.error('error caught in component')
+        console.error(error)
+      }
+    )
     
   }
 
@@ -36,14 +46,5 @@ export class GenerateKeyComponent implements OnInit {
     this._snackBar.open(message, "Ok", {
       duration: 2000,
     });
-  }
-
-  CopyToClipboard(text: string){
-    document.addEventListener('copy', (e: ClipboardEvent) => {
-      e.clipboardData.setData('text/plain', (text));
-      e.preventDefault();
-      document.removeEventListener('copy', null);
-    });
-    document.execCommand('copy');
   }
 }
