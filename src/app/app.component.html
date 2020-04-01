@@ -1,18 +1,26 @@
-<header>
-  <div class="container">
-    <a href="#" class="logo">Asymetric cryptography</a>
-    <nav>
-      <ul>
-        <li><a href href="#" [routerLink]="['/']">Generate key</a></li>
-        <li><a href="#" [routerLink]="['/crypt']">Cryptography</a></li>
-        <li><a href="#" [routerLink]="['/about']">About Us</a></li>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(111, 0, 255); ">
+    <a class="navbar-brand" style="color: white;"  href="#">Asymetric cryptography</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" style="color: white;" href="#" [routerLink]="['/']">Generate key <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" style="color: white;" href="#" [routerLink]="['/crypt']">Cryptography <span class="sr-only">(current)</span></a>
+        </li> <li class="nav-item active">
+          <a class="nav-link" style="color: white;" href="#" [routerLink]="['/about']">About Us <span class="sr-only">(current)</span></a>
+        </li>
       </ul>
-    </nav>
-  </div>
-</header>
-
-
-<div class="card">
+    </div>
+  </nav>
+</div>
+<br>
+<div class="container">
   <mat-card >
     <mat-card-content>
       <router-outlet></router-outlet>

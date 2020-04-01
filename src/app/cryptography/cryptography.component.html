@@ -1,11 +1,15 @@
 <mat-tab-group>
     <mat-tab label="Encrypt"> 
           <mat-form-field class="example-full-width">
-            <textarea rows="5" matInput placeholder="Public key"></textarea>
+            <textarea rows="1" matInput placeholder="Public key"></textarea>
           </mat-form-field>
         
           <mat-form-field class="example-full-width">
-            <textarea rows="10" matInput disabled placeholder="Private key"></textarea>
+            <textarea rows="10" matInput  placeholder="Message"></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <textarea rows="8" matInput disabled placeholder="Ciphertext"></textarea>
           </mat-form-field>
         
           <div class="example-button-row">
@@ -14,11 +18,15 @@
     </mat-tab>
     <mat-tab label="Decrypt"> 
             <mat-form-field class="example-full-width">
-              <textarea rows="5" matInput disabled placeholder="Public key"></textarea>
+              <textarea rows="1" matInput  placeholder="Private key"></textarea>
             </mat-form-field>
           
             <mat-form-field class="example-full-width">
-              <textarea rows="10" matInput disabled placeholder="Private key"></textarea>
+              <textarea rows="10" matInput  placeholder="Message"></textarea>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <textarea rows="8" matInput disabled placeholder="Plaintext"></textarea>
             </mat-form-field>
           
             <div class="example-button-row">
