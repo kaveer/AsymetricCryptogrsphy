@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 // to use ng model
 import { FormsModule } from '@angular/forms'
 
+import { ClipboardModule } from '@angular/cdk/clipboard'
+
 // Angular material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -53,7 +55,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
     MatGridListModule,
     MatTabsModule,
     MatIconModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ClipboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
