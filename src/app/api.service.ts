@@ -6,7 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  sBaseUrl:string = 'http://localhost:64347/'
+  // sBaseUrl:string = 'http://localhost:64347/'
+  sBaseUrl:string = 'https://asymmetriccryptography.azurewebsites.net/'
+
   sGenerateKeyEndpoint: string = 'key/generate/'
   sEncryptEndpoint : string =  'key/encrypt/'
   sDecryptEndpoint : string =  'key/decrypt/'

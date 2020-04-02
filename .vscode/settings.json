@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/37ce3e32-cbfb-42a5-9db0-cc4c734737b3/resourceGroups/AsymmetricCryptography/providers/Microsoft.Web/sites/aymmetric",
+    "appService.deploySubpath": "dist\\AsymetricCryptography"
+}
