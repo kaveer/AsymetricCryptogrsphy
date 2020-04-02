@@ -1,15 +1,15 @@
 <mat-tab-group>
     <mat-tab label="Encrypt"> 
           <mat-form-field class="example-full-width">
-            <textarea rows="1" matInput placeholder="Public key">{{sEncryptPublicKey}}</textarea>
+            <textarea rows="1" matInput placeholder="Public key" [(ngModel)]="sEncryptPublicKey"></textarea>
           </mat-form-field>
         
           <mat-form-field class="example-full-width">
-            <textarea rows="10" matInput  placeholder="Plaintext">{{sEncryptPlainText}}</textarea>
+            <textarea rows="10" matInput  placeholder="Plaintext" [(ngModel)]="sEncryptPlainText"></textarea>
           </mat-form-field>
 
           <mat-form-field class="example-full-width">
-            <textarea rows="8" matInput disabled placeholder="Ciphertext">{{sEncryptCiphertext}}</textarea>
+            <textarea rows="8" matInput placeholder="Ciphertext" [(ngModel)]="sEncryptCiphertext"></textarea>
           </mat-form-field>
         
           <div class="example-button-row">
@@ -18,15 +18,15 @@
     </mat-tab>
     <mat-tab label="Decrypt"> 
             <mat-form-field class="example-full-width">
-              <textarea rows="1" matInput  placeholder="Private key">{{sDecryptPrivateKey}}</textarea>
+              <textarea rows="1" matInput  placeholder="Private key" [(ngModel)]="sDecryptPrivateKey"></textarea>
             </mat-form-field>
           
             <mat-form-field class="example-full-width">
-              <textarea rows="10" matInput  placeholder="Ciphertext">{{sDecryptCiphertext}}</textarea>
+              <textarea rows="10" matInput  placeholder="Ciphertext" [(ngModel)]="sDecryptCiphertext"></textarea>
             </mat-form-field>
 
             <mat-form-field class="example-full-width">
-              <textarea rows="8" matInput disabled placeholder="Plaintext">{{sDecryptPlainText}}</textarea>
+              <textarea rows="8" matInput placeholder="Plaintext" [(ngModel)]="sDecryptPlainText"></textarea>
             </mat-form-field>
           
             <div class="example-button-row">
