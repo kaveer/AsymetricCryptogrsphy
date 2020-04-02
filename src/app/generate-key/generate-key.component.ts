@@ -28,14 +28,18 @@ export class GenerateKeyComponent implements OnInit {
     }
    
     // fetch from api
-    this._apiService.GenerateKey(1).subscribe(
+    this._apiService.GenerateKey(Number(this.sSelectBitType)).subscribe(
       (response) => {                           
         console.log('response received')
         console.log(response)
+        this.sPrivateKey = response.PrivateKey
+        this.sPublicKey = response.PublicKey
+        this.DisplaySnackBar("Keys generated")
       },
       (error) => {                              
         console.error('error caught in component')
         console.error(error)
+        this.DisplaySnackBar("Fail to generate asymmetric keys")
       }
     )
     
